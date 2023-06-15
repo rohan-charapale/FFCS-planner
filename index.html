@@ -239,6 +239,26 @@
       </div>
     </div>
 
+    <div id="lab">
+      <p text-type="bold">How many subjects have lab component?</p>
+      <input type="number" step="1" placeholder="No. of Labs" id="LABSLOT" />
+      <button onclick="add_labslots()" class="btn">ADD</button>
+      
+    </div>
+    <p id="note">*NOTE:eg. for slot input (L1+L2) or (L1,L2,L30,L31)</p>
+    <div id="grid_container2" width="90%" align="center"></div>
+    <div id="template-div">
+      <input type="text" class="in" placeholder="LAB slots" id="slots" />
+      <input type="text" class="in" placeholder="Faculty" id="Faculty" />
+      <input type="text" class="in" placeholder="Subject" id="Subject" />
+      <input type="text" class="in" placeholder="Room No." id="Room" />
+      <button onclick="add_slot(event)" class="btn" id="add_slot">ADD</button>
+      <button onclick="del_slot(event)" class="btn" id="del_slot">
+        Delete
+      </button>
+    </div>
+    
+    
     <div id="tab">
       <table
         id="table"
@@ -491,25 +511,7 @@
       </table>
     </div>
     <div id="down"><button id="downloadBtn">Download</button></div>
-
-    <div id="lab">
-      <p text-type="bold">How many subjects have lab component?</p>
-      <input type="number" step="1" placeholder="No. of Labs" id="LABSLOT" />
-      <button onclick="add_labslots()" class="btn">ADD</button>
-      
-    </div>
-    <p id="note">*NOTE:eg. for slot input (L1+L2) or (L1,L2,L30,L31)</p>
-    <div id="grid_container2" width="90%" align="center"></div>
-    <div id="template-div">
-      <input type="text" class="in" placeholder="LAB slots" id="slots" />
-      <input type="text" class="in" placeholder="Faculty" id="Faculty" />
-      <input type="text" class="in" placeholder="Subject" id="Subject" />
-      <input type="text" class="in" placeholder="Room No." id="Room" />
-      <button onclick="add_slot(event)" class="btn" id="add_slot">ADD</button>
-      <button onclick="del_slot(event)" class="btn" id="del_slot">
-        Delete
-      </button>
-    </div>
+    
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script>
       document

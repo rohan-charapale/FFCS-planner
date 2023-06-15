@@ -27,6 +27,7 @@ h1 {
     width: auto;
     grid-template-columns: 1fr;
     gap: 2px;
+    position: sticky;
   }
   /* CSS rules specific to small screens */
 }
@@ -192,6 +193,11 @@ table {
   margin: 15px;
   text-align: center;
   font-size: large;
+  transform: scale(1.2);
+}
+#note{
+  margin: 15px;
+  display: none;
 }
 #grid_container2 {
   /* width: 1050px; */

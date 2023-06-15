@@ -208,10 +208,11 @@ function add_labslots() {
     container.appendChild(clone);
     var cloneId = "LAB_in_" + cloneCounter;
     clone.setAttribute("id", cloneId);
+    document.getElementById(cloneId).style.padding="5px 5px 5px 5px";
     var slot = clone.querySelector("#slots");
     var slotID = "slot" + cloneCounter;
     slot.setAttribute("id", slotID);
-    document.getElementById(cloneId).style.padding="5px 5px 5px 5px";
+
     var sub = clone.querySelector("#Subject");
     var subID = "SUB_" + cloneCounter;
     sub.setAttribute("id", subID);
@@ -233,7 +234,9 @@ function add_labslots() {
     del.setAttribute("id", delID);
     cloneCounter++;
   }
+  
   toggleDiv();
+  container.scrollIntoView();
 }
 function add_slot(event) {
   var div = event.target;
@@ -268,6 +271,7 @@ function add_slot(event) {
       room.value;
     LABcellIDs[index].style.backgroundColor = hi;
   }
+  
 }
 function del_slot(event) {
   var div = event.target;
@@ -291,7 +295,9 @@ function del_slot(event) {
 }
 function toggleDiv() {
   var div = document.getElementById("grid_container2");
+  var n=document.getElementById("note");
   div.style.display = "grid"; // Show the div
+  n.style.display = "block";
 }
 var temp = document.getElementById("template-div");
 function a1_add_data() {

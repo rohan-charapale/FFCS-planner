@@ -1,0 +1,240 @@
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#grid_container1 {
+  /* width: 1050px; */
+  position: sticky;
+  top: 0;
+  margin-left: 4%;
+  margin-right: 4%;
+  position: relative;
+  margin-top: 15px;
+  display: grid;
+  border: 3px solid;
+  border-radius: 3px;
+  background-color: rgb(226, 226, 226);
+}
+@media (max-width: 399px) {
+  #grid_container1 {
+    width: auto;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  /* CSS rules specific to small screens */
+}
+
+/* Styles for screens between 600px and 959px */
+@media (min-width: 600px) and (max-width: 959px) {
+  #grid_container1 {
+    grid-template-columns: 1fr;
+    padding: 3px 3px 3px 3px;
+    gap: 5px;
+  }
+  /* CSS rules specific to medium screens */
+}
+
+/* Styles for screens larger than 960px */
+@media (min-width: 960px) {
+  #grid_container1 {
+    grid-template-columns: 1fr 1fr;
+    padding: 5px 5px 5px 5px;
+    gap: 10px;
+  }
+}
+#A1 {
+  padding: 5px 5px 5px 5px;
+}
+#A1:hover {
+  transform: scale(1.1);
+}
+#A2 {
+  padding: 5px 5px 5px 5px;
+}
+#A2:hover {
+  transform: scale(1.1);
+}
+#B1 {
+  padding: 5px 5px 5px 5px;
+}
+#B1:hover {
+  transform: scale(1.1);
+}
+#B2 {
+  padding: 5px 5px 5px 5px;
+}
+#B2:hover {
+  transform: scale(1.1);
+}
+#C1 {
+  padding: 5px 5px 5px 5px;
+}
+#C1:hover {
+  transform: scale(1.1);
+}
+#C2 {
+  padding: 5px 5px 5px 5px;
+}
+#C2:hover {
+  transform: scale(1.1);
+}
+#D1 {
+  padding: 5px 5px 5px 5px;
+}
+#D1:hover {
+  transform: scale(1.1);
+}
+#D2 {
+  padding: 5px 5px 5px 5px;
+}
+#D2:hover {
+  transform: scale(1.1);
+}
+#E1 {
+  padding: 5px 5px 5px 5px;
+}
+#E1:hover {
+  transform: scale(1.1);
+}
+#E2 {
+  padding: 5px 5px 5px 5px;
+}
+#E2:hover {
+  transform: scale(1.1);
+}
+#F1 {
+  padding: 5px 5px 5px 5px;
+}
+#F1:hover {
+  transform: scale(1.1);
+}
+#F2 {
+  padding: 5px 5px 5px 5px;
+}
+#F2:hover {
+  transform: scale(1.1);
+}
+#G1 {
+  padding: 5px 5px 5px 5px;
+}
+#G1:hover {
+  transform: scale(1.1);
+}
+#G2 {
+  padding: 5px 5px 5px 5px;
+}
+#G2:hover {
+  transform: scale(1.1);
+}
+
+table {
+  margin-top: 50px;
+  width: 91.5%;
+  text-align: center;
+  margin-left: 4%;
+  margin-right: 4%;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+.grey {
+  background-color: rgb(226, 226, 226);
+}
+
+.th {
+  background-color: rgb(204, 204, 251);
+}
+.la {
+  background-color: rgb(164, 203, 250);
+}
+.t {
+  background-color: rgb(255, 255, 209);
+}
+.l {
+  background-color: rgb(238, 229, 161);
+}
+.in {
+  width: 84px;
+}
+.se {
+  width: 109.5px;
+}
+
+#downloadBtn {
+  /* text-align: center; */
+  margin-top: 15px;
+  background: rgb(255, 247, 236);
+  background: radial-gradient(
+    circle,
+    rgba(255, 247, 236, 1) 78%,
+    rgba(147, 148, 137, 1) 94%
+  );
+  width: 150px;
+  height: 35px;
+  font-size: 20px;
+  box-shadow: 1px 1px 5px 1px;
+}
+#downloadBtn:hover {
+  transform: scale(1.1);
+}
+#down {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5%;
+}
+#lab {
+  margin: 15px;
+  text-align: center;
+  font-size: large;
+}
+#grid_container2 {
+  /* width: 1050px; */
+  display: none;
+  position: sticky;
+  top: 0;
+  margin-left: 4%;
+  margin-right: 4%;
+  position: relative;
+  margin-top: 15px;
+  /* display: grid; */
+  border: 3px solid;
+  border-radius: 3px;
+  background-color: rgb(226, 226, 226);
+}
+@media (max-width: 399px) {
+  #grid_container2 {
+    width: auto;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  /* CSS rules specific to small screens */
+}
+
+/* Styles for screens between 600px and 959px */
+@media (min-width: 600px) and (max-width: 959px) {
+  #grid_container2 {
+    grid-template-columns: 1fr;
+    padding: 3px 3px 3px 3px;
+    gap: 5px;
+  }
+  /* CSS rules specific to medium screens */
+}
+
+/* Styles for screens larger than 960px */
+@media (min-width: 960px) {
+  #grid_container2 {
+    grid-template-columns: 1fr 1fr;
+    padding: 5px 5px 5px 5px;
+    gap: 10px;
+  }
+}
+
+#template-div {
+  display: none;
+}

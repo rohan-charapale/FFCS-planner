@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>FFCS</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>FFCS PLANNER</h1>
+    <hr />
+    <div id="grid_container1" width="90%" align="center">
+      <div id="A1">
+        <select id="a1" class="se">
+          <!-- <option disabled selected value="">A</option> -->
+          <option value="x">A1</option>
+          <option value="tx">TA1</option>
+          <option value="txx">TAA1</option>
+          <option value="x/tx">A1/TA1</option>
+          <option value="x/tx/txx">A1/TA1/TAA1</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="A1_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="A1_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="A1_Room" />
+
+        <button onclick="a1_add_data()" class="btn">ADD</button>
+        <button onclick="a1_del()" class="btn">Delete</button>
+      </div>
+      <div id="A2">
+        <select id="a2" class="se">
+          <option value="x">A2</option>
+          <option value="tx">TA2</option>
+          <option value="txx">TAA2</option>
+          <option value="x/tx">A2/TA2</option>
+          <option value="x/tx/txx">A2/TA2/TAA2</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="A2_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="A2_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="A2_Room" />
+        <button onclick="a2_add_data()" class="btn">ADD</button>
+        <button onclick="a2_del()" class="btn">Delete</button>
+      </div>
+
+      <div id="B1">
+        <select id="b1" class="se">
+          <option value="x">B1</option>
+          <option value="tx">TB1</option>
+          <option value="txx">TBB1</option>
+          <option value="x/tx">B1/TB1</option>
+          <option value="x/tx/txx">B1/TB1/TBB1</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="B1_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="B1_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="B1_Room" />
+        <button onclick="b1_add_data()" class="btn">ADD</button>
+        <button onclick="b1_del()" class="btn">Delete</button>
+      </div>
+
+      <div id="B2">
+        <select id="b2" class="se">
+          <option value="x">B2</option>
+          <option value="tx">TB2</option>
+          <option value="txx">TBB2</option>
+          <option value="x/tx">B2/TB2</option>
+          <option value="x/tx/txx">B2/TB2/TBB2</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="B2_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="B2_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="B2_Room" />
+
+        <button onclick="b2_add_data()" class="btn">ADD</button>
+        <button onclick="b2_del()" class="btn">Delete</button>
+      </div>
+
+      <div id="C1">
+        <select id="c1" class="se">
+          <option value="x">C1</option>
+          <option value="tx">TC1</option>
+          <option value="txx">TCC1</option>
+          <option value="x/tx">C1/TC1</option>
+          <option value="x/tx/txx">C1/TC1/TCC1</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="C1_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="C1_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="C1_Room" />
+
+        <button onclick="c1_add_data()" class="btn">ADD</button>
+        <button onclick="c1_del()" class="btn">Delete</button>
+      </div>
+
+      <div id="C2">
+        <select id="c2" class="se">
+          <option value="x">C2</option>
+          <option value="tx">TC2</option>
+          <option value="txx">TCC2</option>
+          <option value="x/tx">C2/TC2</option>
+          <option value="x/tx/txx">C2/TC2/TCC2</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="C2_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="C2_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="C2_Room" />
+
+        <button onclick="c2_add_data()" class="btn">ADD</button>
+        <button onclick="c2_del()" class="btn">Delete</button>
+      </div>
+
+      <div id="D1">
+        <select id="d1" class="se">
+          <option value="x">D1</option>
+          <option value="tx">TD1</option>
+          <option value="txx">TDD1</option>
+          <option value="x/tx">D1/TD1</option>
+          <option value="x/tx/txx">D1/TD1/TDD1</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="D1_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="D1_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="D1_Room" />
+
+        <button onclick="d1_add_data()" class="btn">ADD</button>
+        <button onclick="d1_del()" class="btn">Delete</button>
+      </div>
+
+      <div id="D2">
+        <select id="d2" class="se">
+          <option value="x">D2</option>
+          <option value="tx">TD2</option>
+          <option value="txx">TDD2</option>
+          <option value="x/tx">D2/TD2</option>
+          <option value="x/tx/txx">D2/TD2/TDD2</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="D2_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="D2_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="D2_Room" />
+
+        <button onclick="d2_add_data()" class="btn">ADD</button>
+        <button onclick="d2_del()" class="btn">Delete</button>
+      </div>
+
+      <div id="E1">
+        <select id="e1" class="se">
+          <option value="x">E1</option>
+          <option value="tx">TE1</option>
+          <option value="txx">TEE1</option>
+          <option value="x/tx">E1/TE1</option>
+          <option value="x/tx/txx">E1/TE1/TEE1</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="E1_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="E1_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="E1_Room" />
+
+        <button onclick="e1_add_data()" class="btn">ADD</button>
+        <button onclick="e1_del()" class="btn">Delete</button>
+      </div>
+
+      <div id="E2">
+        <select id="e2" class="se">
+          <option value="x">E2</option>
+          <option value="tx">TE2</option>
+          <option value="txx">TEE2</option>
+          <option value="x/tx">E2/TE2</option>
+          <option value="x/tx/txx">E2/TE2/TEE2</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="E2_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="E2_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="E2_Room" />
+
+        <button onclick="e2_add_data()" class="btn">ADD</button>
+        <button onclick="e2_del()" class="btn">Delete</button>
+      </div>
+
+      <div id="F1">
+        <select id="f1" class="se">
+          <option value="x">F1</option>
+          <option value="tx">TF1</option>
+          <option value="txx">TFF1</option>
+          <option value="x/tx">F1/TF1</option>
+          <option value="x/tx/txx">F1/TF1/TFF1</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="F1_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="F1_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="F1_Room" />
+
+        <button onclick="f1_add_data()" class="btn">ADD</button>
+        <button onclick="f1_del()" class="btn">Delete</button>
+      </div>
+
+      <div id="F2">
+        <select id="f2" class="se">
+          <option value="x">F2</option>
+          <option value="tx">TF2</option>
+          <option value="txx">TFF2</option>
+          <option value="x/tx">F2/TF2</option>
+          <option value="x/tx/txx">F2/TF2/TFF2</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="F2_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="F2_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="F2_Room" />
+
+        <button onclick="f2_add_data()" class="btn">ADD</button>
+        <button onclick="f2_del()" class="ibtn">Delete</button>
+      </div>
+
+      <div id="G1">
+        <select id="g1" class="se">
+          <option value="x">G1</option>
+          <option value="tx">TG1</option>
+          <option value="txx">TGG1</option>
+          <option value="x/tx">G1/TG1</option>
+          <option value="x/tx/txx">G1/TG1/TGG1</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="G1_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="G1_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="G1_Room" />
+
+        <button onclick="g1_add_data()" class="btn">ADD</button>
+        <button onclick="g1_del() " class="btn">Delete</button>
+      </div>
+
+      <div id="G2">
+        <select id="g2" class="se">
+          <option value="x">G2</option>
+          <option value="tx">TG2</option>
+          <option value="txx">TGG2</option>
+          <option value="x/tx">G2/TG2</option>
+          <option value="x/tx/txx">G2/TG2/TGG2</option>
+        </select>
+        <input type="text" class="in" placeholder="Faculty" id="G2_Fac" />
+        <input type="text" class="in" placeholder="Subject" id="G2_Sub" />
+        <input type="text" class="in" placeholder="Room No." id="G2_Room" />
+
+        <button onclick="g2_add_data()" class="btn">ADD</button>
+        <button onclick="g2_del()" class="btn">Delete</button>
+      </div>
+    </div>
+
+    <div id="tab">
+      <table
+        id="table"
+        cellspacing="0"
+        cellpadding="2"
+        border="3"
+        width="90%"
+        align="center"
+        style="border-collapse: collapse"
+        bordercolor="#000000"
+        border-radius:
+        25px
+      >
+        <tr>
+          <th rowspan="2" class="grey">
+            THEORY <br />
+            HOURS
+          </th>
+          <th class="grey">START</th>
+          <th class="th">08:00</th>
+          <th class="th">08:55</th>
+          <th class="th">09:50</th>
+          <th class="th">10:45</th>
+          <th class="th">11:40</th>
+          <th class="th">12:35</th>
+          <th class="th">02:00</th>
+          <th class="th">02:55</th>
+          <th class="th">03:50</th>
+          <th class="th">04:45</th>
+          <th class="th">05:40</th>
+          <th class="th">06:35</th>
+        </tr>
+
+        <th class="grey">END</th>
+        <th class="th">08:50</th>
+        <th class="th">09:45</th>
+        <th class="th">10:40</th>
+        <th class="th">11:35</th>
+        <th class="th">12:30</th>
+        <th class="th">01:25</th>
+        <th class="th">02:55</th>
+        <th class="th">03:45</th>
+        <th class="th">04:40</th>
+        <th class="th">05:35</th>
+        <th class="th">06:30</th>
+        <th class="th">07:25</th>
+        <tr></tr>
+        <tr>
+          <th rowspan="2" class="grey">
+            LAB <br />
+            HOURS
+          </th>
+          <th class="grey">START</th>
+          <th class="la">08:00</th>
+          <th class="la">08:50</th>
+          <th class="la">09:50</th>
+          <th class="la">10:40</th>
+          <th class="la">11:40</th>
+          <th class="la">12:30</th>
+
+          <th class="la">02:00</th>
+          <th class="la">02:50</th>
+          <th class="la">03:50</th>
+          <th class="la">04:40</th>
+          <th class="la">05:40</th>
+          <th class="la">06:30</th>
+        </tr>
+
+        <tr>
+          <th class="grey">END</th>
+          <th class="la">08:50</th>
+          <th class="la">09:40</th>
+          <th class="la">10:40</th>
+          <th class="la">11:30</th>
+          <th class="la">12:30</th>
+          <th class="la">01:20</th>
+
+          <th class="la">02:50</th>
+          <th class="la">03:40</th>
+          <th class="la">04:40</th>
+          <th class="la">05:30</th>
+          <th class="la">06:30</th>
+          <th class="la">07:20</th>
+        </tr>
+
+        <tr>
+          <th rowspan="2" class="grey">MON</th>
+          <td class="grey">THEORY</td>
+          <td>A1</td>
+          <td>F1</td>
+          <td>D1</td>
+          <td>TB1</td>
+          <td>TG1</td>
+          <td>S11</td>
+          <td>A2</td>
+          <td>F2</td>
+          <td>D2</td>
+          <td>TB2</td>
+          <td>TG2</td>
+          <td>S3</td>
+        </tr>
+
+        <tr>
+          <td class="grey">LAB</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <th rowspan="2" class="grey">TUE</th>
+          <td class="grey">THEORY</td>
+          <td>B1</td>
+          <td>G1</td>
+          <td>E1</td>
+          <td>TC1</td>
+          <td>TAA1</td>
+          <td>-</td>
+          <td>B2</td>
+          <td>G2</td>
+          <td>E2</td>
+          <td>TC2</td>
+          <td>TAA2</td>
+          <td>S1</td>
+        </tr>
+
+        <tr>
+          <td class="grey">LAB</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <th rowspan="2" class="grey">WED</th>
+          <td class="grey">THEORY</td>
+          <td>C1</td>
+          <td>A1</td>
+          <td>F1</td>
+          <td>TD1</td>
+          <td>TBB1</td>
+          <td>-</td>
+          <td>C2</td>
+          <td>A2</td>
+          <td>F2</td>
+          <td>TD2</td>
+          <td>TBB2</td>
+          <td>S4</td>
+        </tr>
+
+        <tr>
+          <td class="grey">LAB</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <th rowspan="2" class="grey">THU</th>
+          <td class="grey">THEORY</td>
+          <td>D1</td>
+          <td>B1</td>
+          <td>G1</td>
+          <td>TE1</td>
+          <td>TCC1</td>
+          <td>-</td>
+          <td>D2</td>
+          <td>B2</td>
+          <td>G2</td>
+          <td>TE2</td>
+          <td>TCC2</td>
+          <td>S2</td>
+        </tr>
+
+        <tr>
+          <td class="grey">LAB</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <th rowspan="2" class="grey">FRI</th>
+          <td class="grey">THEORY</td>
+          <td>E1</td>
+          <td>C1</td>
+          <td>TA1</td>
+          <td>TF1</td>
+          <td>TDD1</td>
+          <td>S15</td>
+          <td>E2</td>
+          <td>C2</td>
+          <td>TA2</td>
+          <td>TF2</td>
+          <td>TDD2</td>
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td class="grey">LAB</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div id="down"><button id="downloadBtn">Download</button></div>
+
+    <div id="lab">
+      <p text-type="bold">How many subjects have lab component?</p>
+      <input type="number" step="1" placeholder="No. of Labs" id="LABSLOT" />
+      <button onclick="add_labslots()" class="btn">ADD</button>
+      <p>PLEASE ENTER ALL SLOT WITH SAME LAB(eg.L1+L2, L1+L2+L30+L31)</p>
+      <p>Also include you STS slot in this</p>
+    </div>
+
+    <div id="grid_container2" width="90%" align="center"></div>
+    <div id="template-div">
+      <input type="text" class="in" placeholder="LAB slots" id="slots" />
+      <input type="text" class="in" placeholder="Faculty" id="Faculty" />
+      <input type="text" class="in" placeholder="Subject" id="Subject" />
+      <input type="text" class="in" placeholder="Room No." id="Room" />
+      <button onclick="add_slot(event)" class="btn" id="add_slot">ADD</button>
+      <button onclick="del_slot(event)" class="btn" id="del_slot">
+        Delete
+      </button>
+    </div>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function () {
+          html2canvas(document.querySelector("#table")).then((canvas) => {
+            var context = canvas.getContext("2d");
+            var canvasWidth = canvas.width;
+            var canvasHeight = canvas.height;
+            var borderWidth = 5;
+            var image = canvas.toDataURL("image/png");
+
+            // var newWindow = window.open();
+            // newWindow.document.write('<img src="' + image + '"/>');
+
+            var a = document.createElement("a");
+            a.href = image;
+            a.download = "table.png";
+            a.click();
+          });
+        });
+    </script>
+    <script src="script.js" async defer></script>
+  </body>
+</html>

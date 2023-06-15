@@ -211,7 +211,7 @@ function add_labslots() {
     var slot = clone.querySelector("#slots");
     var slotID = "slot" + cloneCounter;
     slot.setAttribute("id", slotID);
-
+    document.getElementById(cloneId).style.padding="5px 5px 5px 5px";
     var sub = clone.querySelector("#Subject");
     var subID = "SUB_" + cloneCounter;
     sub.setAttribute("id", subID);

@@ -11,8 +11,12 @@ body{
   margin: 0;
   padding: 0;
 }
+/* #main{
+  display: flexbox;
+  flex-direction: column;
+} */
 h1 {
-  font-size: 36px;
+  /* font-size: 36px; */
   font-weight: bold;
   color: #FBD1A2;
   text-align: center;
@@ -33,12 +37,13 @@ h1 {
 }
 #grid_container1 {
   /* width: 1050px; */
-  /* position: sticky; */
+  position: sticky;
   top: 80px;
   margin-left: 4%;
   margin-right: 4%;
   position: relative;
   margin-top: 15px;
+  padding: 15px 15px 15px 15px;
   display: grid;
   border: 3px solid;
   border-radius: 3px;
@@ -49,8 +54,9 @@ h1 {
     width: auto;
     grid-template-columns: 1fr;
     gap: 2px;
-    position: sticky;
+    /* position: sticky; */
   }
+
   /* CSS rules specific to small screens */
 }
 
@@ -157,14 +163,81 @@ h1 {
   transform: scale(1.1);
 }
 
+#lab {
+  
+  margin-top: 150px;
+  text-align: center;
+  font-size: large;
+  transform: scale(1.2);
+}
+#note{
+  margin: 15px;
+  display: none;
+}
+
+#grid_container2 {
+  /* width: 1050px; */
+  display: none;
+  /* position: sticky; */
+  top: 0;
+  margin-left: 4%;
+  margin-right: 4%;
+  position: relative;
+  margin-top: 15px;
+  /* display: grid; */
+  border: 3px solid;
+  border-radius: 3px;
+  background-color: rgb(226, 226, 226);
+}
+@media (max-width: 399px) {
+  #tab{
+    width: 380px;
+    overflow-x: scroll;
+  }
+  #grid_container2 {
+    width: auto;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  /* CSS rules specific to small screens */
+}
+
+/* Styles for screens between 600px and 959px */
+@media (min-width: 600px) and (max-width: 959px) {
+  #tab{
+    width: 0 auto;
+    
+    /* overflow-x: scroll; */
+  }
+  #grid_container2 {
+    grid-template-columns: 1fr;
+    padding: 3px 3px 3px 3px;
+    gap: 5px;
+  }
+  /* CSS rules specific to medium screens */
+}
+
+/* Styles for screens larger than 960px */
+@media (min-width: 960px) {
+  #tab{
+    width: auto;
+  }
+  #grid_container2 {
+    grid-template-columns: 1fr 1fr;
+    padding: 5px 5px 5px 5px;
+    gap: 10px;
+  }
+}
 table {
   margin-top: 50px;
-  width: 91.5%;
+  /* width: 91.5%; */
   text-align: center;
   margin-left: 4%;
   margin-right: 4%;
   border-radius: 10px;
-  overflow-x: auto;
+  justify-content: center;
+  align-items: center;
+  
 }
 .grey {
   background-color: rgb(226, 226, 226);
@@ -210,58 +283,6 @@ table {
   display: flex;
   justify-content: flex-end;
   padding-right: 5%;
-}
-#lab {
-  
-  margin-top: 150px;
-  text-align: center;
-  font-size: large;
-  transform: scale(1.2);
-}
-#note{
-  margin: 15px;
-  display: none;
-}
-#grid_container2 {
-  /* width: 1050px; */
-  display: none;
-  position: sticky;
-  top: 0;
-  margin-left: 4%;
-  margin-right: 4%;
-  position: relative;
-  margin-top: 15px;
-  /* display: grid; */
-  border: 3px solid;
-  border-radius: 3px;
-  background-color: rgb(226, 226, 226);
-}
-@media (max-width: 399px) {
-  #grid_container2 {
-    width: auto;
-    grid-template-columns: 1fr;
-    gap: 2px;
-  }
-  /* CSS rules specific to small screens */
-}
-
-/* Styles for screens between 600px and 959px */
-@media (min-width: 600px) and (max-width: 959px) {
-  #grid_container2 {
-    grid-template-columns: 1fr;
-    padding: 3px 3px 3px 3px;
-    gap: 5px;
-  }
-  /* CSS rules specific to medium screens */
-}
-
-/* Styles for screens larger than 960px */
-@media (min-width: 960px) {
-  #grid_container2 {
-    grid-template-columns: 1fr 1fr;
-    padding: 5px 5px 5px 5px;
-    gap: 10px;
-  }
 }
 
 #template-div {

@@ -188,9 +188,9 @@ h1 {
   border-radius: 3px;
   background-color: rgb(226, 226, 226);
 }
-@media (max-width: 399px) {
+@media (max-width: 599px) {
   #tab {
-    width: 380px;
+    width: auto;
     overflow-x: scroll;
   }
   #grid_container2 {

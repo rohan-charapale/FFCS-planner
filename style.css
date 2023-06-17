@@ -1,18 +1,40 @@
+header{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  background-color: rgb(10 1 79 /80%);
+  backdrop-filter: blur(50%);
+}
+body{
+  background-color: #7DCFB6;
+  margin: 0;
+  padding: 0;
+}
 h1 {
   font-size: 36px;
   font-weight: bold;
-  color: #333;
+  color: #FBD1A2;
   text-align: center;
   text-transform: uppercase;
   margin: 20px 0;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
+#he {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #0A014F; */
+}
+#logo{
+  width: 50px;
+  height: 50px;
+}
 #grid_container1 {
   /* width: 1050px; */
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  top: 80px;
   margin-left: 4%;
   margin-right: 4%;
   position: relative;
@@ -190,7 +212,8 @@ table {
   padding-right: 5%;
 }
 #lab {
-  margin: 15px;
+  
+  margin-top: 150px;
   text-align: center;
   font-size: large;
   transform: scale(1.2);

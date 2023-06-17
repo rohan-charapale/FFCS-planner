@@ -204,7 +204,7 @@ function add_labslots() {
   for (let i = 0; i < numInputs; i++) {
     var clone = temp_div.cloneNode(true);
     clone.style.display = "block";
-    clone.style.transform = "scale(1.1)";
+    // clone.style.transform = "scale(1.1)";
     container.appendChild(clone);
     var cloneId = "LAB_in_" + cloneCounter;
     clone.setAttribute("id", cloneId);
@@ -260,7 +260,9 @@ function add_slot(event) {
   console.log(numbers);
   for (var i = 0; i < numbers.length; i++) {
     var index = numbers[i] - 1;
-    LABcellIDs[index].innerHTML =
+    var check="L"+numbers[i];
+    if(LABcellIDs[index].innerHTML==check){
+      LABcellIDs[index].innerHTML =
       "FAC = " +
       fac.value +
       "<br />" +
@@ -269,7 +271,12 @@ function add_slot(event) {
       "<br />" +
       "ROOM = " +
       room.value;
-    LABcellIDs[index].style.backgroundColor = hi;
+      LABcellIDs[index].style.backgroundColor = hi;
+    }
+    else{
+      alert("CLASH! FILL IN OTHER SLOT OR DELETE THE SLOT FIRST");
+    }
+    
   }
   
 }
@@ -285,7 +292,7 @@ function del_slot(event) {
 
   for (var i = 0; i < numbers.length; i++) {
     if (numbers < 31) {
-      LABcellIDs_m[numbers[i] - 1].innerHTML = LABValues_m[numbers[i] - 1];
+      LABcellIDs_m[numbers[i] - 1].innerHTML = "L" +numbers[i];
       LABcellIDs_m[numbers[i] - 1].style.backgroundColor = no_l;
     } else {
       LABcellIDs_e[numbers[i] - 1 - 30].innerHTML = "L" + numbers[i];
@@ -649,3 +656,14 @@ function g2_del() {
     THValues[17]
   );
 }
+
+window.addEventListener('beforeunload', function(event) {
+  // Cancel the event
+  event.preventDefault();
+  // Chrome requires returnValue to be set
+  event.returnValue = '';
+
+  // Display a warning message
+  var message = 'Are you sure you want to leave this site?';
+  return message;
+});

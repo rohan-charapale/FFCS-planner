@@ -8,12 +8,20 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>FFCS</title>
+    <link rel="icon" type="image/png" href="ffcs logo.png"/>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>FFCS PLANNER</h1>
+
+    <header>
+      <div id="he">
+<!--         <img src="logo in.png" alt="logo" id="logo"> -->
+        <h1>FFCS PLANNER</h1>
+      </div>
+    </header>
+
     <div id="grid_container1" width="90%" align="center">
       <div id="A1">
         <select id="a1" class="se">
@@ -236,6 +244,25 @@
         <button onclick="g2_add_data()" class="btn">ADD</button>
         <button onclick="g2_del()" class="btn">Delete</button>
       </div>
+    </div>
+
+    <div id="lab">
+      <p text-type="bold">How many subjects have lab component?</p>
+      <input type="number" step="1" placeholder="No. of Labs" id="LABSLOT" />
+      <button onclick="add_labslots()" class="btn">ADD</button>
+      
+    </div>
+    <p id="note">*NOTE:eg. for slot input (L1+L2) or (L1,L2,L30,L31)</p>
+    <div id="grid_container2" width="90%" align="center"></div>
+    <div id="template-div">
+      <input type="text" class="in" placeholder="LAB slots" id="slots" />
+      <input type="text" class="in" placeholder="Faculty" id="Faculty" />
+      <input type="text" class="in" placeholder="Subject" id="Subject" />
+      <input type="text" class="in" placeholder="Room No." id="Room" />
+      <button onclick="add_slot(event)" class="btn" id="add_slot">ADD</button>
+      <button onclick="del_slot(event)" class="btn" id="del_slot">
+        Delete
+      </button>
     </div>
 
     <div id="tab">
@@ -491,24 +518,7 @@
     </div>
     <div id="down"><button id="downloadBtn">Download</button></div>
 
-    <div id="lab">
-      <p text-type="bold">How many subjects have lab component?</p>
-      <input type="number" step="1" placeholder="No. of Labs" id="LABSLOT" />
-      <button onclick="add_labslots()" class="btn">ADD</button>
-      
-    </div>
-    <p id="note">*NOTE:eg. for slot input (L1+L2) or (L1,L2,L30,L31)</p>
-    <div id="grid_container2" width="90%" align="center"></div>
-    <div id="template-div">
-      <input type="text" class="in" placeholder="LAB slots" id="slots" />
-      <input type="text" class="in" placeholder="Faculty" id="Faculty" />
-      <input type="text" class="in" placeholder="Subject" id="Subject" />
-      <input type="text" class="in" placeholder="Room No." id="Room" />
-      <button onclick="add_slot(event)" class="btn" id="add_slot">ADD</button>
-      <button onclick="del_slot(event)" class="btn" id="del_slot">
-        Delete
-      </button>
-    </div>
+    
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script>
       document

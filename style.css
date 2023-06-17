@@ -1,4 +1,4 @@
-header{
+header {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -6,8 +6,8 @@ header{
   background-color: rgb(10 1 79 /80%);
   backdrop-filter: blur(50%);
 }
-body{
-  background-color: #7DCFB6;
+body {
+  background-color: #7dcfb6;
   margin: 0;
   padding: 0;
 }
@@ -18,7 +18,7 @@ body{
 h1 {
   /* font-size: 36px; */
   font-weight: bold;
-  color: #FBD1A2;
+  color: #fbd1a2;
   text-align: center;
   text-transform: uppercase;
   margin: 20px 0;
@@ -31,7 +31,7 @@ h1 {
   justify-content: center;
   /* background-color: #0A014F; */
 }
-#logo{
+#logo {
   width: 50px;
   height: 50px;
 }
@@ -164,13 +164,12 @@ h1 {
 }
 
 #lab {
-  
   margin-top: 150px;
   text-align: center;
   font-size: large;
   transform: scale(1.2);
 }
-#note{
+#note {
   margin: 15px;
   display: none;
 }
@@ -190,7 +189,7 @@ h1 {
   background-color: rgb(226, 226, 226);
 }
 @media (max-width: 399px) {
-  #tab{
+  #tab {
     width: 380px;
     overflow-x: scroll;
   }
@@ -204,9 +203,9 @@ h1 {
 
 /* Styles for screens between 600px and 959px */
 @media (min-width: 600px) and (max-width: 959px) {
-  #tab{
+  #tab {
     width: 0 auto;
-    
+
     /* overflow-x: scroll; */
   }
   #grid_container2 {
@@ -219,7 +218,7 @@ h1 {
 
 /* Styles for screens larger than 960px */
 @media (min-width: 960px) {
-  #tab{
+  #tab {
     width: auto;
   }
   #grid_container2 {
@@ -237,7 +236,6 @@ table {
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  
 }
 .grey {
   background-color: rgb(226, 226, 226);
